@@ -1,0 +1,3 @@
+(?:(?:\"|'|\]|\}|\\|\d|(?:nan|infinity|true|
+false|null|undefined|symbol|math)|\`|\-|\+)+
+[)]*;?((?:\s|-|~|!|{}|\|\||\+)*.*(?:.*=.*)))

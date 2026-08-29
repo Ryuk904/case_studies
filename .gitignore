@@ -1,0 +1,16 @@
+# Secrets — never commit. Rotate any key that has been pasted into a chat or terminal.
+.env
+.env.*
+*.key
+
+# Build output: regenerable from script.md, and large.
+# Untracked but NOT disposable: episodes/*/out/vo/ is the synthesised voice cache, and on
+# Gemini's free tier rebuilding one episode's worth costs a day of quota. Delete the mp4 and
+# the frames freely; leave vo/ alone.
+episodes/*/out/
+# The ready-to-upload copy of the mp4 plus its thumbnail. Same bytes as out/, renamed to the
+# video's title so YouTube prefills it — a deliverable, not source.
+episodes/*/upload/
+scratch/
+__pycache__/
+*.pyc

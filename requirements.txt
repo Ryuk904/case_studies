@@ -1,0 +1,11 @@
+# Core render + audio chain. Deliberately light: no pydub, no moviepy, no system ffmpeg.
+# Audio is decoded/muxed through the ffmpeg binary that imageio-ffmpeg already bundles.
+edge-tts>=7.0.0        # TTS backend #1 (free, no API key)
+pycairo>=1.26          # frame rasterisation
+numpy>=2.0             # audio buffers, layout maths
+imageio-ffmpeg>=0.5    # bundled ffmpeg binary (encode + decode)
+Pillow>=10.0           # thumbnails, font metrics
+
+# Optional TTS backends, installed only if selected in pipeline/config.py:
+#   kokoro     -> pip install kokoro-onnx onnxruntime soundfile
+#   elevenlabs -> pip install elevenlabs
